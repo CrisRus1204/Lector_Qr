@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector de QR a Texto Final</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Lector de Código QR</h1>
+
+        <div id="reader"></div>
+
+        <div class="resultado-box">
+            <h2>Resultado:</h2>
+            <p id="resultadoTexto">Escaneá un código QR...</p>
+            
+            <button id="botonCopiar" class="btn-copiar" style="display:none;">
+                Copiar Texto
+            </button>
+            
+            <span id="copyMessage" class="copy-msg">¡Copiado!</span>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

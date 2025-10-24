@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el contenedor del lector (importante para el tamaño) */
+#reader {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 20px auto;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.resultado-box {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #e9ecef;
+}
+
+#resultadoTexto {
+    font-size: 1.0em;
+    color: #000;
+    font-weight: 500;
+    word-wrap: break-word; 
+    white-space: pre-wrap; /* Mantiene saltos de línea (\n) y espacios del formato */
+    text-align: left;
+    padding: 10px 0;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* Estilos para el Botón de Copiar */
+.btn-copiar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+    outline: none;
+}
+
+.btn-copiar:hover {
+    background-color: #218838;
+}
+
+/* Estilos para el mensaje de confirmación */
+.copy-msg {
+    display: none; /* Inicialmente oculto */
+    color: #28a745;
+    font-weight: bold;
+    margin-left: 10px;
+}
