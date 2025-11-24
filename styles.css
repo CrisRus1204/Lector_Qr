@@ -46,12 +46,20 @@ h1 {
     font-size: 1.0em;
     color: #000;
     font-weight: 500;
-    word-wrap: break-word; 
+    word-wrap: break-word;
     white-space: pre-wrap; /* Mantiene saltos de línea (\n) y espacios del formato */
     text-align: left;
-    padding: 10px 0;
+    padding: 10px;
     background-color: #f8f9fa;
     border-radius: 4px;
+    min-height: 50px;
+    border: 1px solid #ccc;
+    cursor: text;
+}
+
+#resultadoTexto:focus {
+    outline: 2px solid #007bff;
+    background-color: #fff;
 }
 
 /* Estilos para el Botón de Copiar */
@@ -78,4 +86,100 @@ h1 {
     color: #28a745;
     font-weight: bold;
     margin-left: 10px;
+}
+
+/* Estilos para la previsualización del contrato */
+.preview-box {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    background-color: #f0f8ff;
+}
+
+.preview-box h3 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+#textoContrato {
+    font-size: 0.95em;
+    color: #000;
+    font-weight: 500;
+    white-space: pre-wrap;
+    text-align: left;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 150px;
+    cursor: text;
+}
+
+#textoContrato:focus {
+    outline: 2px solid #007bff;
+}
+
+.btn-copiar-preview {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+    outline: none;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-copiar-preview:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la sección de contratos predefinidos */
+.contratos-section {
+    margin-top: 25px;
+    padding: 15px;
+    border: 2px solid #6c757d;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+.contratos-section h3 {
+    color: #495057;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.botones-contratos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-contrato {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+    outline: none;
+    font-weight: 500;
+}
+
+.btn-contrato:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
 }

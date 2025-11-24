@@ -1,32 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lector de QR a Texto Final</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector de QR a Texto Final</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Lector de Código QR</h1>
+    <div class="container">
+        <h1>Lector de Código QR</h1>
 
-        <div id="reader"></div>
+        <div id="reader"></div>
 
-        <div class="resultado-box">
-            <h2>Resultado:</h2>
-            <p id="resultadoTexto">Escaneá un código QR...</p>
-            
-            <button id="botonCopiar" class="btn-copiar" style="display:none;">
-                Copiar Texto
-            </button>
-            
-            <span id="copyMessage" class="copy-msg">¡Copiado!</span>
-        </div>
-    </div>
+        <div class="resultado-box">
+            <h2>Resultado:</h2>
+            <div id="resultadoTexto" contenteditable="true">Escaneá un código QR...</div>
+            
+            <button id="botonCopiar" class="btn-copiar" style="display:none;">
+                Copiar Texto
+            </button>
+            
+            <button id="botonDescargarResultado" class="btn-descargar" style="display:none;">
+                Descargar TXT
+            </button>
+            
+            <span id="copyMessage" class="copy-msg">¡Copiado!</span>
+        </div>
 
-    <script src="https://unpkg.com/html5-qrcode"></script>
-    
-    <script src="script.js"></script>
+        <div id="previsualizacionContrato" class="preview-box" style="display:none;">
+            <h3>Formato Contrato:</h3>
+            <div id="textoContrato" contenteditable="true"></div>
+            
+            <button id="botonCopiarContrato" class="btn-copiar-preview">
+                Copiar Formato Contrato
+            </button>
+            
+            <button id="botonDescargarContrato" class="btn-descargar">
+                Descargar TXT
+            </button>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pizzip/3.1.4/pizzip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.45.0/docxtemplater.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
